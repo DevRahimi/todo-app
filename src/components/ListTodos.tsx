@@ -30,7 +30,7 @@ const ListTodos = ({ todos, setTodos }: Props) => {
 
 	return (
 		<div className="container mx-auto flex-col gap-2 p-4">
-			<h1 className="mx-4 mt-4 text-2xl font-bold">
+			<h1 className="mt-4 text-2xl font-bold">
 				{incompleteTodos.length} Todos
 			</h1>
 			{incompleteTodos.map(todo => (
@@ -40,9 +40,7 @@ const ListTodos = ({ todos, setTodos }: Props) => {
 					key={todo.id}
 				>
 					<div className="flex items-center justify-between">
-						<p className={`grow ${todo.completed ? 'text-slate-400' : ''} `}>
-							{todo.text}
-						</p>
+						<p className="grow">{todo.text}</p>
 						<div className="flex gap-2">
 							<button
 								onClick={() => handleDeleteTodo(todo.id)}

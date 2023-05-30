@@ -3,6 +3,7 @@ import AddTodo from './components/AddTodo';
 import ListTodos from './components/ListTodos';
 import NavBar from './components/NavBar';
 import { Todo } from './components/AddTodo';
+import CompletedTodos from './components/ComletedTodos';
 
 function App() {
 	// // store todos in local storage to persist data on refresh or empty list
@@ -25,6 +26,7 @@ function App() {
 			<NavBar />
 			<AddTodo todos={todos} setTodos={setTodos} />
 			<ListTodos todos={todos} setTodos={setTodos} />
+			<CompletedTodos todos={todos} setTodos={setTodos} />
 		</>
 	);
 }
