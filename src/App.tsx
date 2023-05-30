@@ -1,9 +1,11 @@
+import AddTodo from './components/AddTodo';
 import NavBar from './components/NavBar';
 
 function App() {
 	return (
 		<>
 			<NavBar />
+			<AddTodo />
 			<div className="container mx-auto p-4">
 				<h1 className="text-2xl font-bold">Todo List</h1>
 				<ul className="mt-4">
