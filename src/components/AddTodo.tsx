@@ -3,6 +3,7 @@ import { useState } from 'react';
 export interface Todo {
 	id: number;
 	text: string;
+	completed: boolean;
 }
 
 interface Props {
@@ -22,6 +23,7 @@ const AddTodo = ({ todos, setTodos }: Props) => {
 		const newTodo: Todo = {
 			id: todos.length + 1,
 			text: value,
+			completed: false,
 		};
 
 		setTodos([...todos, newTodo]);
