@@ -1,49 +1,21 @@
+import { useState } from 'react';
 import AddTodo from './components/AddTodo';
+import ListTodos from './components/ListTodos';
 import NavBar from './components/NavBar';
+import { Todo } from './components/AddTodo';
 
 function App() {
+	const [todos, setTodos] = useState<Todo[]>([
+		{ id: 1, text: 'Learn React' },
+		{ id: 2, text: 'Learn TypeScript' },
+		{ id: 3, text: 'Learn Tailwind CSS' },
+	]);
+
 	return (
 		<>
 			<NavBar />
-			<AddTodo />
-			<div className="container mx-auto p-4">
-				<h1 className="text-2xl font-bold">Todo List</h1>
-				<ul className="mt-4">
-					<li className="flex items-center justify-between">
-						<span className="text-lg">Learn React</span>
-						<div className="flex items-center">
-							<button className="rounded-lg bg-slate-800 px-3 py-2 text-white hover:bg-slate-700">
-								Edit
-							</button>
-							<button className="ml-2 rounded-lg bg-slate-800 px-3 py-2 text-white hover:bg-slate-700">
-								Delete
-							</button>
-						</div>
-					</li>
-					<li className="flex items-center justify-between">
-						<span className="text-lg">Learn React</span>
-						<div className="flex items-center">
-							<button className="rounded-lg bg-slate-800 px-3 py-2 text-white hover:bg-slate-700">
-								Edit
-							</button>
-							<button className="ml-2 rounded-lg bg-slate-800 px-3 py-2 text-white hover:bg-slate-700">
-								Delete
-							</button>
-						</div>
-					</li>
-					<li className="flex items-center justify-between">
-						<span className="text-lg">Learn React</span>
-						<div className="flex items-center">
-							<button className="rounded-lg bg-slate-800 px-3 py-2 text-white hover:bg-slate-700">
-								Edit
-							</button>
-							<button className="ml-2 rounded-lg bg-slate-800 px-3 py-2 text-white hover:bg-slate-700">
-								Delete
-							</button>
-						</div>
-					</li>
-				</ul>
-			</div>
+			<AddTodo todos={todos} setTodos={setTodos} />
+			<ListTodos todos={todos} />
 		</>
 	);
 }

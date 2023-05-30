@@ -1,12 +1,16 @@
 import { useState } from 'react';
 
-interface Todo {
+export interface Todo {
 	id: number;
 	text: string;
 }
 
-const AddTodo = () => {
-	const [todos, setTodos] = useState<Todo[]>([]);
+interface Props {
+	todos: Todo[];
+	setTodos: (todos: Todo[]) => void;
+}
+
+const AddTodo = ({ todos, setTodos }: Props) => {
 	const [value, setValue] = useState('');
 
 	const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,8 +23,6 @@ const AddTodo = () => {
 			id: todos.length + 1,
 			text: value,
 		};
-
-		console.log(newTodo);
 
 		setTodos([...todos, newTodo]);
 		setValue('');
