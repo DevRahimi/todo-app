@@ -15,7 +15,7 @@ function App() {
 		<>
 			<NavBar />
 			<AddTodo todos={todos} setTodos={setTodos} />
-			<ListTodos todos={todos} />
+			<ListTodos todos={todos} setTodos={setTodos} />
 		</>
 	);
 }
