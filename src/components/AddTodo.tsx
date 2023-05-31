@@ -40,7 +40,7 @@ const AddTodo = ({ todos, setTodos }: Props) => {
 				onChange={handleInput}
 			/>
 			<button
-				className="rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-400"
+				className="rounded-lg border border-sky-400 bg-sky-400 px-4 py-2 text-white transition duration-300 hover:bg-white hover:text-sky-400"
 				type="submit"
 				onClick={handleAddTodo}
 			>

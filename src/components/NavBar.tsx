@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const NavBar = () => {
 	return (
-		<nav className="bg-green-500 text-white">
+		<nav className="bg-sky-400 text-white">
 			<div className="container mx-auto flex items-center justify-between p-3">
 				<div className="flex items-center">
 					<img src="src/assets/todo-logo.svg" className="h-8 w-auto" />
