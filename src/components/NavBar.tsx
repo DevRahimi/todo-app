@@ -5,7 +5,7 @@ const NavBar = () => {
 		<nav className="bg-sky-400 text-white">
 			<div className="container mx-auto flex items-center justify-between p-3">
 				<div className="flex items-center">
-					<img src="src/assets/todo-logo.svg" className="h-8 w-auto" />
+					<img src="../assets/todo-logo.svg" className="h-8 w-auto" />
 					<h1 className="mx-2 text-2xl font-bold">Todo App</h1>
 				</div>
 				<div className="flex items-center">
