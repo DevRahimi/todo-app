@@ -34,7 +34,7 @@ const AddTodo = ({ todos, setTodos }: TodoProps) => {
 		<div className="container mx-auto flex justify-between gap-2 p-4">
 			<input
 				type="text"
-				className="grow rounded-lg border border-gray-400 px-4 py-2 focus:outline-none"
+				className="grow rounded-lg border border-gray-400 px-4 py-2 focus:outline-2 focus:outline-slate-400"
 				placeholder="Add Todo..."
 				value={value}
 				onChange={handleInput}
