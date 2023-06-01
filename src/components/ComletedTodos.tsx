@@ -1,12 +1,7 @@
-import { Todo } from './AddTodo';
+import { TodoProps } from './AddTodo';
 import { FaTrashAlt } from 'react-icons/fa';
 
-interface Props {
-	todos: Todo[];
-	setTodos: (todos: Todo[]) => void;
-}
-
-const CompletedTodos = ({ todos, setTodos }: Props) => {
+const CompletedTodos = ({ todos, setTodos }: TodoProps) => {
 	const handleDeleteTodo = (id: number) => {
 		const updatedTodos = todos.filter(todo => todo.id !== id);
 		setTodos(updatedTodos);

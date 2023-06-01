@@ -6,12 +6,12 @@ export interface Todo {
 	completed: boolean;
 }
 
-interface Props {
+export interface TodoProps {
 	todos: Todo[];
 	setTodos: (todos: Todo[]) => void;
 }
 
-const AddTodo = ({ todos, setTodos }: Props) => {
+const AddTodo = ({ todos, setTodos }: TodoProps) => {
 	const [value, setValue] = useState('');
 
 	const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {

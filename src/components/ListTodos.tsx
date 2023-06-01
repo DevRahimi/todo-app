@@ -1,12 +1,7 @@
-import { Todo } from './AddTodo';
+import { TodoProps } from './AddTodo';
 import { FaTrashAlt, FaCheck } from 'react-icons/fa';
 
-interface Props {
-	todos: Todo[];
-	setTodos: (todos: Todo[]) => void;
-}
-
-const ListTodos = ({ todos, setTodos }: Props) => {
+const ListTodos = ({ todos, setTodos }: TodoProps) => {
 	// delete todo
 	const handleDeleteTodo = (id: number) => {
 		const updatedTodos = todos.filter(todo => todo.id !== id);
