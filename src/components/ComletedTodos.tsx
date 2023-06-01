@@ -7,12 +7,7 @@ const CompletedTodos = ({ todos, setTodos }: TodoProps) => {
 		setTodos(updatedTodos);
 	};
 
-	if (todos.length === 0)
-		return (
-			<h1 className="mt-4 text-center text-2xl font-bold">
-				No Todos have been completed
-			</h1>
-		);
+	if (todos.length === 0 || todos.every(todo => !todo.completed)) return null;
 
 	const completeTodos = todos.filter(todo => todo.completed);
 
