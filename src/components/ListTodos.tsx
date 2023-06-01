@@ -2,13 +2,11 @@ import { TodoProps } from './AddTodo';
 import { FaTrashAlt, FaCheck } from 'react-icons/fa';
 
 const ListTodos = ({ todos, setTodos }: TodoProps) => {
-	// delete todo
 	const handleDeleteTodo = (id: number) => {
 		const updatedTodos = todos.filter(todo => todo.id !== id);
 		setTodos(updatedTodos);
 	};
 
-	// complete todo
 	const handleCompleteTodo = (id: number) => {
 		setTodos(
 			todos.map(todo => {
