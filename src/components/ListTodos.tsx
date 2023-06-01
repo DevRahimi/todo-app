@@ -44,13 +44,13 @@ const ListTodos = ({ todos, setTodos }: Props) => {
 						<div className="flex gap-2">
 							<button
 								onClick={() => handleDeleteTodo(todo.id)}
-								className="rounded-lg bg-red-500 px-4 py-2 text-white hover:bg-red-400"
+								className="rounded-lg border border-red-500 bg-white px-4 py-2 text-red-500 transition duration-300 hover:bg-red-500 hover:text-white"
 							>
 								<FaTrashAlt />
 							</button>
 							<button
 								onClick={() => handleCompleteTodo(todo.id)}
-								className="rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-400"
+								className="rounded-lg border border-green-500 bg-white px-4 py-2 text-green-500 transition duration-300 hover:bg-green-500 hover:text-white"
 							>
 								<FaCheck />
 							</button>
