@@ -6,7 +6,6 @@ const NavBar = () => {
 		<nav className="bg-sky-400 text-white">
 			<div className="container mx-auto flex items-center justify-between p-3">
 				<div className="flex items-center">
-					{/* FIXME: logo src not working in deployment */}
 					<img src={logo} className="h-8 w-auto" />
 					<h1 className="mx-2 text-2xl font-bold">Todo App</h1>
 				</div>
