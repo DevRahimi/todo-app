@@ -26,7 +26,7 @@ const AddTodo = ({ todos, setTodos }: TodoProps) => {
 			completed: false,
 		};
 
-		setTodos([...todos, newTodo]);
+		setTodos([newTodo, ...todos]);
 		setValue('');
 	};
 
@@ -38,6 +38,9 @@ const AddTodo = ({ todos, setTodos }: TodoProps) => {
 				placeholder="Add Todo..."
 				value={value}
 				onChange={handleInput}
+				onKeyDown={e => {
+					if (e.key === 'Enter') handleAddTodo();
+				}}
 			/>
 			<button
 				className="rounded-lg border border-sky-400 bg-sky-400 px-4 py-2 text-white transition duration-300 hover:bg-white hover:text-sky-400"
