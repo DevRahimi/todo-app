@@ -9,7 +9,7 @@ const CompletedTodos = ({ todos, setTodos }: TodoProps) => {
 
 	if (todos.length === 0 || todos.every(todo => !todo.completed)) return null;
 
-	const completeTodos = todos.filter(todo => todo.completed);
+	const completeTodos = todos.filter(todo => todo.completed).reverse();
 
 	return (
 		<div className="container mx-auto flex-col gap-2 p-4">
